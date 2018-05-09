@@ -1,0 +1,12 @@
+<?php 
+include "conexion.php"; 
+$sql="select * from datos"; 
+$result=mysql_query($sql, $conexion); 
+while ($row=mysql_fetch_array($result)) 
+	{ 
+	echo '<tr bgcolor="#E0FFFF"><td>'.$row['nombre'].'</td>';
+	echo'<td>'.$row['apellido'].'</td>' ; 
+	echo '<td>'.$row['telefono'].'</td></tr>'; 
+	} 
+include "cerrar.php"; 
+?> 
